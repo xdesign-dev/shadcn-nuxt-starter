@@ -1,0 +1,20 @@
+:root {
+  --shiki-foreground: #fff8;
+  --shiki-color-background: #ffffff;
+  --shiki-token-constant: #ffffff;
+  --shiki-token-string: #ffffff88;
+  --shiki-token-comment: #ffffff88;
+  --shiki-token-keyword: #ffffff88;
+  --shiki-token-parameter: #aa0000;
+  --shiki-token-function: #ffffff;
+  --shiki-token-string-expression: #ebebeb;
+  --shiki-token-punctuation: #ffffff;
+  --shiki-token-link: #ee0000;
+}
+
+.shiki .highlighted-word {
+  border-radius: calc(var(--radius) - 2px);
+  border-color: rgba(63, 63, 70, 0.7);
+  background-color: rgba(63, 63, 70, 0.5);
+  padding: 0.25rem;
+}
