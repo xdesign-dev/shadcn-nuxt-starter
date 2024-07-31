@@ -30,7 +30,7 @@ export const useConfigStore = defineStore('config', () => {
     // set iframe theme
     iframes.forEach((iframe) => {
       try {
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow!.document
         for (const className of iframeDocument.documentElement.classList) {
           if (className.startsWith('theme-'))
             iframeDocument.documentElement.classList.remove(className)
@@ -52,7 +52,7 @@ export const useConfigStore = defineStore('config', () => {
       // set iframe theme
       iframes.forEach((iframe) => {
         try {
-          const iframeDocument = iframe.contentDocument || iframe.contentWindow.document
+          const iframeDocument = iframe.contentDocument || iframe.contentWindow!.document
           if (iframeDocument)
             iframeDocument.documentElement.style.setProperty('--radius', `${newRadius}rem`)
         }

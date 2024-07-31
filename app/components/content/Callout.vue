@@ -2,7 +2,7 @@
 interface CalloutProps {
   icon?: string
   title?: string
-  variant?: string
+  variant?: 'default' | 'destructive' | null | undefined
 }
 
 defineProps<CalloutProps>()

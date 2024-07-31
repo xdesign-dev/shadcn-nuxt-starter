@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { ArrowRightIcon, GithubLogoIcon } from '@radix-icons/vue'
+// @ts-expect-error missing schema
 import WrapBalancer from 'vue-wrap-balancer'
 import { buttonVariants } from '@/components/ui/button'
 import Spinner from '@/components/Spinner.vue'
 
 const route = useRoute()
 const params = route.params.all
-const name = params.length > 1 && /^[a-zA-Z0-9]+$/.test(params[1]) ? params[1].replace(/\b(\w)/g, m => m.toUpperCase()) : 'Example'
+const name = params && params!.length > 1 && /^[a-zA-Z0-9]+$/.test(params[1]!) ? params[1]!.replace(/\b(\w)/g, m => m.toUpperCase()) : 'Example'
 const Component = defineAsyncComponent({
   loadingComponent: Spinner,
-  loader: () => import(`@/components/examples/${params[0]}/${name}.vue`),
+  loader: () => import(`@/components/examples/${params![0]}/${name}.vue`),
   timeout: 2000,
 })
 

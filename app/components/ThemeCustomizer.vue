@@ -37,7 +37,7 @@ const configStore = useConfigStore()
         >
           <span
             class="h-5 w-5 flex items-center justify-center rounded-full"
-            :style="{ backgroundColor: colors[color][7].rgb }"
+            :style="{ backgroundColor: colors[color][7]!.rgb }"
           >
             <Icon
               v-if="color === configStore.theme"

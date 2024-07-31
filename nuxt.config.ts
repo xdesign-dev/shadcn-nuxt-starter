@@ -36,7 +36,7 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: tag => tag === 'iconify-icon',
+      isCustomElement: (tag: string) => tag === 'iconify-icon',
     },
   },
 

@@ -108,7 +108,7 @@ watch([Meta_K, Ctrl_K], (v) => {
     isOpen.value = true
 })
 
-function handleSelectLink(item: NavItem) {
+function handleSelectLink(item: any) {
   if (item.external)
     window.open(item.href, '_blank')
   else

@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<MailProps>(), {
 })
 
 const isCollapsed = ref(props.defaultCollapsed)
-const selectedMail = ref<string | undefined>(props.mails[0].id)
+const selectedMail = ref<string | undefined>(props.mails[0]!.id)
 const searchValue = ref('')
 const debouncedSearch = refDebounced(searchValue, 250)
 

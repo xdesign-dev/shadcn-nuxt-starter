@@ -8,7 +8,7 @@ definePageMeta({
   <ContentDoc v-slot="{ doc }">
     <div class="mx-auto min-w-0 w-full">
       <div class="block xl:hidden">
-        <TableOfContent :tree="doc.body.toc.links" />
+        <TableOfContent :tree="doc.body!.toc!.links" />
       </div>
 
       <DocsBreadcrumb class="mb-4" />
@@ -30,12 +30,11 @@ definePageMeta({
         <ContentRenderer :value="doc" />
       </div>
 
-    <!-- <EditLink /> -->
     </div>
 
     <div class="hidden text-sm xl:block">
       <div class="sticky top-16 h-[calc(100vh-3.5rem)] overflow-hidden pt-6 -mt-10">
-        <TableOfContent :tree="doc.body.toc.links" />
+        <TableOfContent :tree="doc.body!.toc!.links" />
       </div>
     </div>
   </ContentDoc>

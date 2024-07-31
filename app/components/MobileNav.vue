@@ -2,8 +2,8 @@
 import Logo from './Logo.vue'
 
 const props = withDefaults(defineProps<{
-  nav: Array
-  secondaryNav?: Array
+  nav: any[]
+  secondaryNav?: any[]
 }>(), {
   nav: () => [],
   secondaryNav: () => [],

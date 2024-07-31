@@ -16,12 +16,12 @@ interface Item {
 
 function generateBreadcrumb(url: string): Item[] {
   const breadcrumbItems: Item[] = []
-  const segments = url.split('/').filter(segment => segment !== '') // Remove empty segments
+  const segments: string[] = url.split('/').filter(segment => segment !== '') // Remove empty segments
 
   // Construct breadcrumb for each segment
   let href = ''
   for (let i = 0; i < segments.length; i++) {
-    const segment = segments[i].replace('.html', '')
+    const segment = (segments[i] as string).replace('.html', '')
     href += `/${segment}`
     breadcrumbItems.push({ title: segment, href })
   }

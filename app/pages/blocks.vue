@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowRightIcon, GithubLogoIcon } from '@radix-icons/vue'
+// @ts-expect-error ignore {} not assignable to object
 import WrapBalancer from 'vue-wrap-balancer'
 import { buttonVariants } from '@/components/ui/button'
 
@@ -72,7 +73,7 @@ onMounted(() => {
     iframes.forEach((iframe) => {
       try {
         // 为 iframe 的 html 标签添加类
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow!.document
         iframeDocument.documentElement.classList.remove(
           ...['dark', 'light', 'auto', 'system'],
         )

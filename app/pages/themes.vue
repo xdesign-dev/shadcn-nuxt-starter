@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { getLocalTimeZone, today } from '@internationalized/date'
-
+import type { DateRange } from 'radix-vue'
+// @ts-expect-error missing schema
 import WrapBalancer from 'vue-wrap-balancer'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 

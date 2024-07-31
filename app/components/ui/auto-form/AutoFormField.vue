@@ -2,7 +2,7 @@
 import type { ZodAny } from 'zod'
 import { computed } from 'vue'
 import type { Config, ConfigItem, Shape } from './interface'
-import { DEFAULT_ZOD_HANDLERS, INPUT_COMPONENTS } from './constant'
+import { INPUT_COMPONENTS } from './constant'
 import useDependencies from './dependencies'
 
 const props = defineProps<{
@@ -12,7 +12,7 @@ const props = defineProps<{
 }>()
 
 function isValidConfig(config: any): config is ConfigItem {
-  return !!config?.component
+  return config && typeof config.component !== 'undefined'
 }
 
 const delegatedProps = computed(() => {
@@ -30,7 +30,7 @@ const { isDisabled, isHidden, isRequired, overrideOptions } = useDependencies(pr
       ? typeof config.component === 'string'
         ? INPUT_COMPONENTS[config.component!]
         : config.component
-      : INPUT_COMPONENTS[DEFAULT_ZOD_HANDLERS[shape.type]] "
+      : null "
     v-if="!isHidden"
     :field-name="fieldName"
     :label="shape.schema?.description"

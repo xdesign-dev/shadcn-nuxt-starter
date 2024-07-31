@@ -2,7 +2,7 @@
 import { buttonVariants } from '@/components/ui/button'
 
 withDefaults(defineProps<{
-  tree: Any
+  tree: any
 }>(), {
   tree: () => ({
     links: [],

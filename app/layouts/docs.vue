@@ -10,7 +10,7 @@
       <ScrollArea orientation="vertical" class="relative h-full overflow-hidden py-6 pr-6 lg:py-8" type="auto">
         <div class="w-full">
           <ContentNavigation v-slot="{ navigation }">
-            <div v-for="children in navigation[0].children" :key="children.title" class="pb-4">
+            <div v-for="children in navigation[0]?.children" :key="children.title" class="pb-4">
               <h4
                 v-if="children.children?.length"
                 class="mb-1 rounded-md px-2 py-1 text-sm font-semibold"

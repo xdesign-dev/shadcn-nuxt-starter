@@ -10,6 +10,7 @@ const props = defineProps<{
   block: {
     name: string
     iframeHeight: string
+    description?: string
   }
 }>()
 
@@ -91,7 +92,7 @@ codeHtml.value = await codeToHtml(rawString.value, {
             type="single"
             default-value="100"
             @update:model-value="(value) => {
-              resizableRef?.resize(parseInt(value))
+              resizableRef?.resize(parseInt(value as string))
             }"
           >
             <ToggleGroupItem

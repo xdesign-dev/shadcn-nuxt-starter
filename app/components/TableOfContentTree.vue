@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
   level: number
-  tree: Any
+  tree: any
 }>(), {
   level: 1,
   tree: () => ({

@@ -5,28 +5,16 @@ export const useAppStore = defineStore('app', () => {
   const getUserInfo = computed(() => currentUser.value)
   const isLogin = computed(() => !!currentUser.value?.token)
   const getToken = computed(() => currentUser.value?.token)
-  const setCurrentUser = (info) => {
+  const setCurrentUser = (info: any) => {
     currentUser.value = info
   }
-  const login = async (params) => {
-    const { login } = useApi()
-    const { data } = await login.login(params)
-    currentUser.value = data
-    return data
-  }
+
   const clearUserInfo = () => {
     currentUser.value = undefined
-  }
-  const logout = async () => {
-    const { login } = useApi()
-    await login.logout()
-    clearUserInfo()
   }
 
   return {
     currentUser,
-    login,
-    logout,
     getUserInfo,
     getToken,
     isLogin,

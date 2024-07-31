@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ArrowRightIcon, GithubLogoIcon } from '@radix-icons/vue'
+// @ts-expect-error missing schema
 import WrapBalancer from 'vue-wrap-balancer'
 import { buttonVariants } from '@/components/ui/button'
 </script>

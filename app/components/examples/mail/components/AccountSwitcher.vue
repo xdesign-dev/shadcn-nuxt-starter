@@ -10,7 +10,7 @@ interface AccountSwitcherProps {
 
 const props = defineProps<AccountSwitcherProps>()
 
-const selectedEmail = ref<string>(props.accounts[0].email)
+const selectedEmail = ref<string>(props.accounts[0]!.email)
 const selectedEmailData = computed(() => props.accounts.find(item => item.email === selectedEmail.value))
 </script>
 
