@@ -49,7 +49,9 @@ function getBadgeVariantFromLabel(label: string) {
                     : 'text-muted-foreground',
                 )"
               >
-                {{ formatDistanceToNow(new Date(item.date), { addSuffix: true }) }}
+                <ClientOnly>
+                  {{ formatDistanceToNow(new Date(item.date), { addSuffix: true }) }}
+                </ClientOnly>
               </div>
             </div>
 

@@ -27,12 +27,11 @@ export default defineNuxtConfig({
   // Build as SPA application
   // ssr: false,
 
-  routeRules: {
-    '/': { prerender: true },
-    // '/admin/**': { ssr: false },
-    // '/account/**': { ssr: false },
-    // '/api/**': { cors: true },
-  },
+  // routeRules: {
+  //   // '/admin/**': { ssr: false },
+  //   // '/account/**': { ssr: false },
+  //   // '/api/**': { cors: true },
+  // },
 
   vue: {
     compilerOptions: {

@@ -3,9 +3,4 @@ publish = "dist"
 command = "pnpm run build"
 
 [build.environment]
-NODE_VERSION = "16"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+NODE_VERSION = "18"

@@ -61,12 +61,6 @@ definePageMeta({
         <GithubLogoIcon class="mr-2 h-4 w-4" />
         GitHub
       </a>
-      <Button type="submit">
-        Save changes
-      </Button>
-      <Button type="button">
-        Save changes
-      </Button>
     </section>
   </section>
   <section>
