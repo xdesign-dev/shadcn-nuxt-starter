@@ -38,7 +38,7 @@ This is a starter template using the following stack:
 
 - 💨 Zero-config cloud functions and deploy.
 
-Built-in feature from Next.js:
+Built-in feature from Nuxt.js:
 
 - 🔍 SEO Optimization and Meta tags definition.
 
